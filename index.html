@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cat Image Generator</title>
+    <link rel="icon" href="icon.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="title_decor">
+        <h1>Cat Image Generator</h1>
+    </div>
+    <div class="btn_decor">
+        <button id="btnClick">Click Me</button>
+    </div>
+    <div class="img_decor">
+            <img id="image">
+    </div>
+<script>
+    const btn = document.getElementById("btnClick");
+    const image = document.getElementById("image");
+    const cat_URL = "https://api.thecatapi.com/v1/images/search";
+    btn.addEventListener('click', () => {
+        fetch(cat_URL)
+            .then(response => response.json())
+            .then(result => {
+                for (let { url } of result) {
+                    console.log(result);
+                    image.src = result[0].url
+                }
+            })
+            .catch(error => console.log(error))
+    })
+</script>
+</body>
+
+</html>

@@ -1,0 +1,16 @@
+.title_decor{
+    display: block;
+    clear: both;
+    width: 100%;
+    overflow: hidden;
+    vertical-align: top;
+  }
+  
+  .btn_decor{
+    align-self: start
+  }
+  
+  .img_decor{
+    width: 100%;
+    height: 100%;
+  }
