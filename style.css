@@ -1,13 +1,11 @@
 .title_decor{
-    display: block;
-    clear: both;
+    text-align: center;
     width: 100%;
-    overflow: hidden;
-    vertical-align: top;
   }
   
   .btn_decor{
-    align-self: start
+    text-align: center;
+    margin: 20px;
   }
   
   .img_decor{
